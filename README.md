@@ -32,5 +32,5 @@ MapChat is using [ipinfo.io](http://ipinfo.io/) to identify the user location, s
 - Please search the existing issues for your bug and create a new one only if the issue is not yet tracked!
 - Feel free to fork this project and suggest new features as pull requests.
 
-## [Demo](http://idoco.github.io/map-chat)
+## [Demo](http://chat.luvnft/)
 This demo is hosted on GitHub pages and uses a single core Azure instance as the Vert.x SockJS server.
