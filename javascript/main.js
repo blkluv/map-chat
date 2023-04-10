@@ -1,3 +1,4 @@
+import vertx from 'vertx';
 
 var eb;
 var retryCount = 10;
