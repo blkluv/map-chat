@@ -51,7 +51,7 @@ function initMap() {
         minZoom: minZoom, // Minimum zoom level allowed (0-20)
         maxZoom: 18, // Maximum soom level allowed (0-20)
         zoomControl:false, // Set to true if using zoomControlOptions below, or false to remove all zoom controls.
-        mapTypeId: 'de745aca8e523302', // Set the type of Map
+        mapTypeId: google.maps.MapTypeId.ROADMAP, // Set the type of Map
         scrollwheel: true, // Enable Mouse Scroll zooming
 
         // All of the below are set to true by default, so simply remove if set to true:

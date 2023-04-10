@@ -15,7 +15,7 @@ MapChat is using [ipinfo.io](http://ipinfo.io/) to identify the user location, s
  - Simply add this `iframe` to your website:
 ```html
 <iframe id="mapchat" type="text/html" width="640" height="480"
-  src="http://idoco.github.io/map-chat/#myTopic"
+  src="https://chat.luvnft.com/#myTopic"
   frameborder="0"></iframe>
 ```
 - The minimum recommended size it 640x480.
@@ -32,5 +32,5 @@ MapChat is using [ipinfo.io](http://ipinfo.io/) to identify the user location, s
 - Please search the existing issues for your bug and create a new one only if the issue is not yet tracked!
 - Feel free to fork this project and suggest new features as pull requests.
 
-## [Demo](http://chat.luvnft/)
+## [Demo](https://chat.luvnft/)
 This demo is hosted on GitHub pages and uses a single core Azure instance as the Vert.x SockJS server.
