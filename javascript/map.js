@@ -31,44 +31,36 @@ var entityMap = {
 };
 
 function initMap() {
-
     var defaultLatLng = new google.maps.LatLng(33.7552152,-84.3737159); // Add the coordinates
-
     markerImage = {
         url: 'images/blue_marker.png',
         scaledSize: new google.maps.Size(30, 30)
     };
-
     disabledMarkerImage = {
         url: 'images/grey_marker.png',
         scaledSize: new google.maps.Size(30, 30)
     };
-
-
     var mapOptions = {
         center: defaultLatLng,
-        zoom: defaultZoom, // The initial zoom level when your map loads (0-20)
-        minZoom: minZoom, // Minimum zoom level allowed (0-20)
-        maxZoom: 18, // Maximum soom level allowed (0-20)
-        zoomControl:false, // Set to true if using zoomControlOptions below, or false to remove all zoom controls.
-        mapTypeId: google.maps.MapTypeId.SATELLITE, // Set the type of Map
-        scrollwheel: true, // Enable Mouse Scroll zooming
-
-        // All of the below are set to true by default, so simply remove if set to true:
-        panControl:false, // Set to false to disable
-        mapTypeControl:false, // Disable Map/Satellite switch
-        scaleControl:false, // Set to false to hide scale
-        streetViewControl:false, // Set to disable to hide street view
-        overviewMapControl:false, // Set to false to remove overview control
-        rotateControl:false // Set to false to disable rotate control
+        zoom: defaultZoom,
+        minZoom: minZoom,
+        maxZoom: 18,
+        zoomControl:false,
+        mapTypeId: google.maps.MapTypeId.SATELLITE,
+        scrollwheel: true,
+        panControl:false,
+        mapTypeControl:false,
+        scaleControl:false,
+        streetViewControl:false,
+        overviewMapControl:false,
+        rotateControl:false
     };
     var mapDiv = document.getElementById('map-canvas');
     map = new google.maps.Map(mapDiv, mapOptions);
-
     navigator.geolocation.getCurrentPosition(onFirstPosition, onPositionError, locationOptions);
 }
 
-function onFirstPosition(position){
+function onFirstPosition(position) {
     setUserLocation(position.coords.latitude, position.coords.longitude);
     initialiseEventBus();
     map.panTo(userLocation);
@@ -84,7 +76,9 @@ function onPositionUpdate(position) {
 
 function onPositionError(err) {
     // try fallback location provider ipinfo.io or generate random location
-    $.getJSON("https://ipinfo.io", onFallbackLocationProviderResponse, useRandomLocation);
+    $.getJSON("https://ipinfo.io", onFallbackLocationProviderResponse)
+        .done(onFallbackLocationProviderResponse)
+        .fail(useRandomLocation);
 }
 
 function onFallbackLocationProviderResponse(ipinfo){
