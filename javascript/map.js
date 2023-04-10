@@ -258,5 +258,5 @@ if (window.navigator.userAgent.indexOf("FBAV") > 0) {
             "</div>"
     );
 }  else {
-    google.maps.event.addDomListener(window, 'load', initialize);
+    window.addEventListener('load', initMap);
 }
