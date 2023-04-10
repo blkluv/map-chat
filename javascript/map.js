@@ -1,4 +1,3 @@
-
 var mySessionId;
 var map;
 var userLocation;
@@ -31,7 +30,7 @@ var entityMap = {
     "卍": 'I am a dick '
 };
 
-function initialize() {
+function initMap() {
 
     var defaultLatLng = new google.maps.LatLng(33.7552152,-84.3737159); // Add the coordinates
 
