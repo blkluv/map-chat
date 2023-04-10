@@ -56,7 +56,7 @@ public class ChatVerticle extends Verticle {
         @Override
         public boolean handleSocketCreated(SockJSSocket sock) {
             String origin = sock.headers().get("origin");
-            return origin != null && origin.startsWith("http://chat.luvnft.com") &&
+            return origin != null && origin.startsWith("https://chat.luvnft.com") &&
                     !isBlackListed(sock);
         }
 
